@@ -1,23 +1,18 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import DogDetails from './components/DogDetails';
 
 const App: React.FC = () => {
+  function onBark(){
+    alert("Bark")
+  }
+  
   return (
     <div className="App">
+      
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <DogDetails imageUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIEnlHcilz1ZnwnakpvN54b_ajA1fnHw5Sdp3JUg7hDXYj-5BM" name="Bark!!!" onBark={onBark}></DogDetails>
+
       </header>
     </div>
   );
